@@ -18,6 +18,40 @@
 - **API**: RESTful API (Spring Boot) for communication between backend and frontend
 - **Deployment**: Can be deployed on platforms like **Heroku**, **AWS**, or **Vercel**
 
+## File Structure
+```md
+carolling-tracker/
+├── backend/                      # Spring Boot Backend
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com/
+│   │   │   │       └── carollingtracker/
+│   │   │   │           ├── CarollingTrackerApplication.java  # Main Spring Boot Application
+│   │   │   │           ├── controller/                      # Controller to handle file upload & data retrieval
+│   │   │   │           ├── model/                           # Model for donation records
+│   │   │   │           └── service/                         # Service to process CSV data
+│   │   │   └── resources/
+│   │   │       ├── application.properties                    # Spring Boot configuration
+│   │   │       └── static/                                    # Static assets (Vue.js build output)
+│   ├── pom.xml                                                   # Maven dependencies for backend
+│
+├── frontend/                    # Vue.js Frontend
+│   ├── src/
+│   │   ├── assets/                                            # Static assets (images, etc.)
+│   │   ├── components/                                        # Vue.js components
+│   │   │   └── DonationTable.vue                               # Table component to show donation data
+│   │   ├── views/
+│   │   │   └── Home.vue                                         # Main view for displaying and uploading CSVs
+│   │   ├── App.vue                                              # Main Vue component
+│   │   ├── main.js                                              # Vue.js entry point for app
+│   ├── public/                                                  # Public assets (e.g., index.html)
+│   ├── package.json                                             # NPM dependencies for frontend
+│   └── vue.config.js                                            # Configuration for Vue.js, e.g., proxy setup for API requests
+│
+└── README.md                                                     # Project documentation (this file)
+```
+
 ---
 
 ## Project Structure
